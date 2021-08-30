@@ -5,7 +5,7 @@ void display_complex_number(complex c)
 {
     if (c.im == -1)
     {
-        printf("%g -  i\n", c.re);
+        printf("%g - i\n", c.re);
     }
     else if (c.im < 0)
     {
@@ -17,7 +17,7 @@ void display_complex_number(complex c)
     }
     else if (c.im == 1)
     {
-    printf("%g +  i\n", c.re);
+    printf("%g + i\n", c.re);
     }
     
     else
