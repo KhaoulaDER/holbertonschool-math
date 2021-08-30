@@ -9,4 +9,5 @@ typedef struct
 
 void display_complex_number(complex c);
 complex conjugate(complex c);
+double modulus(complex c);
 #endif 
