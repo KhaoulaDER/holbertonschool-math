@@ -8,5 +8,5 @@ typedef struct
 } complex;
 
 void display_complex_number(complex c);
-
+complex conjugate(complex c);
 #endif 
