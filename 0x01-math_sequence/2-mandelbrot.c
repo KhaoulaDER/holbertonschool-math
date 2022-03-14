@@ -5,7 +5,6 @@ int main()
 	int iX, iY;
 	const int iXmax = 1000;
 	const int iYmax = 1000;
-	double Cx, Cy;
 	complex c, z;
 	int Iteration;
 	const int IterationMax = 255;
@@ -20,7 +19,7 @@ int main()
 	{
 		for (iX = 0; iX < iXmax; iX++)
 		{
-			complex c1,c2;
+			complex c1;
 			c.re = (iX - iXmax / 2) * 4.0 / iXmax;
 			c.im = (iY - iYmax / 2) * 4.0 / iXmax;
 			z.re = 0;
