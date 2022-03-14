@@ -85,13 +85,10 @@ void division(complex c1, complex c2, complex *c3)
 }
 
 // Real and imaginary parts of a complex number given from modulus and arguments
-complex ComplexFromModArg(double m, double arg, complex *c)
+void complex_from_mod_arg (double m, double arg, complex *c3)
 {
-   
-    c->re = m * cos(arg);
-    c->im = m * sin(arg);
-    return c;
-   
+    c3->re = m * cos(arg);
+    c3->im = m * sin(arg);
 }
 
 // Display of the complex number
