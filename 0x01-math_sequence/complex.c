@@ -90,6 +90,7 @@ complex ComplexFromModArg(double m, double arg, complex *c)
    
     c->re = m * cos(arg);
     c->im = m * sin(arg);
+    return c;
    
 }
 
