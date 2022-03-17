@@ -55,6 +55,6 @@ int main()
         }
     }
     /* plot multiple file in the same graph at a specific interval of x */
-    system("gnuplot -p -e \" set terminal png ; set output 'output_ode.png'; plot [-10:10] for[i = 1:32] 'Euler'.i.'.txt'  w l title '' \"");
+    system("gnuplot -p -e \" set terminal png ; set output 'ode.png'; plot [-10:10] for[i = 1:32] 'Euler'.i.'.txt'  w l title '' \"");
     return 0;
 }
