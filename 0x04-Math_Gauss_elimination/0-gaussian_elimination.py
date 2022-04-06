@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import numpy as np
 def gaussian_elimination(A, b): 
     """A must be a quare matrix, b a vector and 
