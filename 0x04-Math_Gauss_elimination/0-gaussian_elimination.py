@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import numpy as np
 def gaussian_elimination(A, b): 
     """A must be a quare matrix, b a vector and 
@@ -16,9 +14,13 @@ def gaussian_elimination(A, b):
             assert C[j, j] != 0 
             mu = - C[i, j] / C[j, j]
             C[i, :] += mu * C[j, :]
-    for i in range(n): 
-        C[i, :] *= 1 / C[i, i]
-    for j in range(n - 1, 0, -1):
-        for i in range(j): 
-            C[i, :] += -C[i,j] * C[j, :]
-    return np.reshape(C[:, n:], n)
+    try:
+      for i in range(n):
+        assert C[i, i] != 0 , "You can't divide by zero!"
+        C[i, :] *= 1 / C[i, i]    
+      for j in range(n - 1, 0, -1):
+          for i in range(j): 
+              C[i, :] += -C[i,j] * C[j, :]
+      return np.reshape(C[:, n:], n)
+    except AssertionError as msg:
+        print(msg)
