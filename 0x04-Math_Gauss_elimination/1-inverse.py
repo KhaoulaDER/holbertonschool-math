@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import numpy as np
 gaussian_elimination = __import__('0-gaussian_elimination').gaussian_elimination
