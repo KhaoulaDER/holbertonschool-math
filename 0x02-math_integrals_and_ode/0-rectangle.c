@@ -1,24 +1,25 @@
-/* Rectangle Method */
+/* #include "rectangle.h" */
 #include <stdio.h>
 #include <math.h>
-/*
- Defining equation to be solved.
- Change this equation to solve another problem.
-*/
-#define f(x) 1 / (1 + x * x) // f(x) = 1/(1+(x)^2)
 
-// Rectangle method to calculate the integral
-double rectangle_method(double a, double b, int n)
+/**
+ * rectangle_method - calculates integral by rectangle method
+ * @a: inferior limit
+ * @b: superior limit
+ * @steps: number of rectangles
+ *
+ * Return: the value of the integral
+ */
+
+
+double rectangle_method(double a, double b, int steps)
 {
-    double h, sum, x;
-    int i;
-    h = (b - a) / n;
-    x = 0;
-    sum = 0.0;
-    for (i = 0; i <= n - 1; i++)
-    {
-        x = a + i*h;
-        sum = sum + (h * f(x)); // f(x_i) = 1/(1+(x_i)^2)
-    }
-    return sum;
+	double sum = 0;
+	double h;
+	int i;
+
+	h = (b - a) / steps;
+	for (i = 0; i < steps; i++)
+		sum += h * (1 / (1 + pow((a + i * h), 2.0)));
+	return (sum);
 }
