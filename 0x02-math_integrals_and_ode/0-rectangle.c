@@ -20,6 +20,6 @@ double rectangle_method(double a, double b, int steps)
 
 	h = (b - a) / steps;
 	for (i = 0; i < steps; i++)
-		sum += h * (1 / (1 + pow((a + i * h), 2.0)));
+		sum += h * (1 / (1 + pow((a + i * h), 2)));
 	return (sum);
 }
