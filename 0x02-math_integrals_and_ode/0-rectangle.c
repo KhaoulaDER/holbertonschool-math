@@ -8,7 +8,7 @@
 #define f(x) 1 / (1 + x * x) // f(x) = 1/(1+(x)^2)
 
 // Rectangle method to calculate the integral
-double rectangleMethod(double a, double b, int n)
+double rectangle_method(double a, double b, int n)
 {
     double h, sum, x;
     int i;
