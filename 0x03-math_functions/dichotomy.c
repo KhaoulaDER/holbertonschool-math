@@ -52,7 +52,7 @@ t_cell *dichotomy(double a, double b)
                 f0 = fc;
             }
 
-        } while (fabs(b-a) >= pow(10, -10));
+        } while (fabs(fc) >= pow(10, -10));
         return head;
     }
 }
