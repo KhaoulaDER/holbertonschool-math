@@ -37,7 +37,7 @@ t_cell *newton(double a)
         head = InitCell(b, head);
         a = b;
 
-    } while (fabs(r) >= pow(10, -4));
+    } while (fabs(r) >= pow(10, -10));
     return head;
 }
 
